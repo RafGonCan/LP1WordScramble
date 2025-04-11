@@ -87,9 +87,9 @@ namespace WordScramble
             {
                 int j = random.Next(i, scrambled.Length);
 
-                char temp = // ////////// => TO IMPLEMENT <= //////////// //
-                scrambled[i] = // ////////// => TO IMPLEMENT <= //////////// //
-                scrambled[j] = // ////////// => TO IMPLEMENT <= //////////// //
+                char temp = scrambled [i];
+                scrambled[i] = scrambled[j];
+                scrambled[j] = temp;
             }
             return new string(scrambled);
         }
