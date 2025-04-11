@@ -3,7 +3,7 @@
 ```mermaid
 
 classDiagram
-    Class Game{
+    class Game{
         - readonly WordProvider 
         - readonly GameResult[] gameStats
         + Game()
@@ -12,7 +12,7 @@ classDiagram
         - void ShowGameStats
     }
 
-    Class WordProvider{
+    class WordProvider{
         - readonly List<string> words
         - readonly Random random
         + WordProvider()
@@ -20,16 +20,16 @@ classDiagram
         + string GetScrambledWord(string word)
     }
 
-    Class GameResult{
-        + string Word {get;}
-        + double timeTaken {get;}
+    class GameResult{
+        + string Word 
+        + double timeTaken
         + GameResult(string word, double timeTaken)
     }
 
-    Class Program{
-        - static void Main(string[] args)
+    class Program{
+        - _static_ void Main(string[] args)
     }
 
-Program --> Game
+Program ..> Game
 Game o--> WordProvider
 Game o--> GameResult
