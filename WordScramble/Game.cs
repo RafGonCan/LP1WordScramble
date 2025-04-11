@@ -24,7 +24,8 @@ namespace WordScramble
         /// </summary>
         public Game()
         {
-            // ////////// => TO IMPLEMENT <= //////////// //
+            wordProvider = new WordProvider();
+            gameStats = new GameResult[5];
         }
 
         /// <summary>
